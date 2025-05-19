@@ -102,7 +102,7 @@ export function isServiceWorkerAvailable() {
 
 export async function registerServiceWorker() {
   if (isServiceWorkerAvailable) {
-    const wb = new Workbox('/sw.bundle.js');
+    const wb = new Workbox('./sw.bundle.js');
     wb.register();
   } else if (!isServiceWorkerAvailable()) {
     console.log('Service Worker API unsupported');
